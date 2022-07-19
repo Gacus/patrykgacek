@@ -37,6 +37,7 @@
 }
 
 .content h1 {
+  font-size: 1em;
   font-weight: 500;
   padding-bottom: 20px;
   margin-bottom: 20px;
@@ -45,6 +46,7 @@
 }
 
 .content p {
+  font-size: 0.8em;
   font-weight: 100;
   line-height: 1.7em;
   letter-spacing: 0.05em;
@@ -119,6 +121,14 @@
     padding: 40px;
     max-width: 640px;
     position: relative;
+  }
+
+  .content h1 {
+    font-size: 1.5em;
+  }
+
+  .content p {
+    font-size: 1em;
   }
 
   .content::before {
