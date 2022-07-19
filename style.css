@@ -1,0 +1,133 @@
+*, *::after, *::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.gradient {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgb(222,0,255);
+  background: linear-gradient(120deg, rgba(222,0,255,1) 0%, rgba(0,5,255,1) 100%);
+  z-index: -4;
+  animation: rhue 30s linear infinite;
+}
+
+.backgroud {
+  position: absolute;
+  top: 1px; right: 1px; bottom: 1px; left: 1px;
+  background-color: rgba(17, 21, 28, 0.9);
+  z-index: -2;
+  filter: blur(3px);
+}
+
+.content {
+  padding: 20px;
+  max-width: 640px;
+  position: relative;
+}
+
+.content h1 {
+  font-weight: 500;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid;
+  animation: fade-in 1s 3s both;
+}
+
+.content p {
+  font-weight: 100;
+  line-height: 1.7em;
+  letter-spacing: 0.05em;
+  margin: 20px 0;
+  animation: fade-in 1s 3.2s both; 
+}
+
+.content a {
+  color: white;
+  font-weight: 500;
+}
+
+.content::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-left: 8px solid;
+  border-top: 8px solid;
+  animation: open-left 2.3s 1.2s both, fade-out 1.3s 2.2s both;
+}
+
+.content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-right: 8px solid;
+  border-bottom: 8px solid;
+  animation: open-right 2.3s 1.2s both, fade-out 1.3s 2.2s both;
+}
+
+.link-icon svg{
+  width: 36px;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  animation: fade-in 1s 3.4s both;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fade-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+@keyframes open-right {
+  from {bottom: calc(50% - 30px); right: calc(50% - 30px); transform: rotate(0deg);}
+  to {bottom: 0; right: 0; transform: rotate(360deg);}
+}
+
+@keyframes open-left {
+  from {top: calc(50% - 30px); left: calc(50% - 30px); transform: rotate(0deg);}
+  to {top: 0; left: 0; transform: rotate(360deg);}
+}
+
+@keyframes rhue {
+  from {filter: hue-rotate(0deg);}
+  to {filter: hue-rotate(360deg);}
+}
+
+@media screen and (min-width: 690px) {
+  .content {
+    padding: 40px;
+    max-width: 640px;
+    position: relative;
+  }
+
+  .content::before {
+    animation: open-right 2.3s 1.2s both;
+  }
+
+  .content::after {
+    animation: open-left 2.3s 1.2s both;
+  }
+}
+
+
