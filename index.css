@@ -25,7 +25,7 @@
 .backgroud {
   position: absolute;
   top: 1px; right: 1px; bottom: 1px; left: 1px;
-  background-color: rgba(17, 21, 28, 0.9);
+  background-color: rgba(17, 21, 28, 0.902);
   z-index: -2;
   filter: blur(3px);
 }
