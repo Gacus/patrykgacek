@@ -1,0 +1,21 @@
+@use '../../style.module';
+
+.navigation {
+  position: fixed;
+  z-index: 2;
+  top: 8px;
+  left: 8px;
+  width: 50px;
+  background-color: #ffffffcc;
+  border-radius: 50%;
+  transition: 0.3s;
+
+  img {
+    display: block;
+    padding: 4px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}

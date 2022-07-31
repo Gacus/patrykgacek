@@ -1,0 +1,86 @@
+@use '../../style.module';
+
+@mixin text {
+  @include style.fontFamily();
+  font-size: 0.8em;
+  color: black;
+}
+
+.projectCard {
+  @include style.glassmorphism(0.2, 10px);
+  @include text;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid rgba( 255, 255, 255, 0.2 );
+  border-radius: 8px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  p {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-weight: 500;
+    margin: 0 0 20px 0;
+  }
+  
+  a {
+    color: black;
+    font-weight: 500;
+  }
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.projectLib {
+  display: flex;
+  font-size: 0.9em;
+  gap: 8px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .projectCard {
+    flex-direction: row;
+    border-radius: 25px;
+
+    img {
+      width: 400px;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .projectCard {
+    font-size: 1em;
+  }
+}
+
