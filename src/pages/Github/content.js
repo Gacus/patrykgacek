@@ -36,7 +36,7 @@ export const content = [
   },
   {
     title: 'Projekt w Figmie',
-    technologies: ['React', 'Chakra-UI'],
+    technologies: [],
     links: [
       { name: 'Podgląd', link: 'https://www.figma.com/file/uPYeQJSgtV2iXPuCSEZabK/Ankietopoll?node-id=2%3A2', target: '_blank' }
     ],
