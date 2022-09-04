@@ -2,8 +2,16 @@ import imgTv from '../../images/tv.webp'
 import imgSparly from '../../images/sparly.webp'
 import imgNote from '../../images/note.webp'
 import imgAnkietopoll from '../../images/ankietopoll.webp'
+import imgInwentaryzacja from '../../images/inwentaryzacja.svg'
 
 export const content = [
+  {
+    title: 'Aplikacja do prostej inwentaryzacji',
+    technologies: ['React', 'Tailwind', 'Firebase', 'Kotlin'],
+    links: [],
+    image: {src: imgInwentaryzacja, alt: 'inwentaryzacja logo'},
+    body: 'Jest to projekt, nad którym obecnie pracuje. Aplikacja wspomoże inwentaryzacje małych sklepów robiących ją za pomocą zeszytu i długopisu. Skanowanie kodów kreskowych produktów z użyciem smartfonu, uzupełnianie cen w prostej aplikacji oraz eksport do pliku xls znacząco usprawni ten proces'
+  },
   {
     title: 'Porównywarka pakietów TV',
     technologies: ['React', 'Chakra-UI'],
@@ -12,7 +20,7 @@ export const content = [
       { name: 'Github', link: 'https://github.com/Gacus/compare-tv-packages', target: '_blank' }
     ],
     image: {src: imgTv, alt: 'Podgląd aplikacji porównywarki pakietów telewizyjnych'},
-    body: 'Aplikacja do porównywania pakietów oferty telewizyjnej. Głównie do przećwiczenia metod tablicowych. Jak dotychczas najbardziej reprezentacyjna aplikacja, jeśli chodzi o jakość kodu.'
+    body: 'Aplikacja do porównywania pakietów oferty telewizyjnej. Głównie do przećwiczenia metod tablicowych.'
   },
   {
     title: 'Aplikacja do zarządzania budżetem domowym',
